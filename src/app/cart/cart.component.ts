@@ -22,12 +22,9 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSumbit(): void {
+  onSubmit(): void {
     this.items = this.cartService.clearCart();
-    console.warn(
-      'Your order has been submitted ',
-      this.checkoutForm.value
-    );
+    console.warn('Your order has been submitted ', this.checkoutForm.value);
     this.checkoutForm.reset();
   }
 }
